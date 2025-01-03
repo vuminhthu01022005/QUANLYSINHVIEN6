@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QUANLYSINHVIEN6.GUI
 {
-    public partial class fQuanLyLop : Form
+    public partial class dgvLop : Form
     {
-        public fQuanLyLop()
+        public dgvLop()
         {
             InitializeComponent();
         }
@@ -99,6 +99,11 @@ namespace QUANLYSINHVIEN6.GUI
             }
             else
                 MessageBox.Show("Vui lòng không bỏ trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxButtons.Warning);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

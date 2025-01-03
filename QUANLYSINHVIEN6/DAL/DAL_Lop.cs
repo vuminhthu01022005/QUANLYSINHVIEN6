@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using QUANLYSINHVIEN6.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QUANLYSINHVIEN6.DAL
 {
-    internal class DAL_Lop
+    public class DAL_Lop
     {
         private static DAL_Lop instance;
         public static DAL_Lop Instance

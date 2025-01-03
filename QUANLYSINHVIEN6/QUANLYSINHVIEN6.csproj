@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_CoVanHocTap.cs" />
     <Compile Include="BLL\BLL_Diem.cs" />
     <Compile Include="BLL\BLL_Khoa.cs" />
     <Compile Include="BLL\BLL_Lop.cs" />
     <Compile Include="BLL\BLL_MonHoc.cs" />
     <Compile Include="BLL\BLL_Sinhvien.cs" />
     <Compile Include="BLL\BLL_TaiKhoan.cs" />
+    <Compile Include="DAL\DAL_CoVanHocTap.cs" />
     <Compile Include="DAL\DAL_Diem.cs" />
     <Compile Include="DAL\DAL_HocBong.cs" />
     <Compile Include="DAL\DAL_Khoa.cs" />
@@ -60,52 +62,115 @@
     <Compile Include="DAL\DAL_SinhVien.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\KetNoi.cs" />
+    <Compile Include="GUI\fCoVanHocTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCoVanHocTap.Designer.cs">
+      <DependentUpon>fCoVanHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fDiem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fDiem.Designer.cs">
       <DependentUpon>fDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLiTaiKhoan.cs">
+    <Compile Include="GUI\fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLiTaiKhoan.Designer.cs">
-      <DependentUpon>fQuanLiTaiKhoan.cs</DependentUpon>
+    <Compile Include="GUI\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLyKhoa.cs">
+    <Compile Include="GUI\fHocBong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLyKhoa.Designer.cs">
-      <DependentUpon>fQuanLyKhoa.cs</DependentUpon>
+    <Compile Include="GUI\fHocBong.Designer.cs">
+      <DependentUpon>fHocBong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLyLop.cs">
+    <Compile Include="GUI\fMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLyLop.Designer.cs">
-      <DependentUpon>fQuanLyLop.cs</DependentUpon>
+    <Compile Include="GUI\fMonHoc.Designer.cs">
+      <DependentUpon>fMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLyMonHoc.cs">
+    <Compile Include="GUI\fSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLyMonHoc.Designer.cs">
-      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    <Compile Include="GUI\fSinhVien.Designer.cs">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fHocPhi.Designer.cs">
+      <DependentUpon>fHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fKhoa.Designer.cs">
+      <DependentUpon>fKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLop.Designer.cs">
+      <DependentUpon>fLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThongTinChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThongTinChiTiet.Designer.cs">
+      <DependentUpon>fThongTinChiTiet.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fCoVanHocTap.resx">
+      <DependentUpon>fCoVanHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fDiem.resx">
       <DependentUpon>fDiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLiTaiKhoan.resx">
-      <DependentUpon>fQuanLiTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLyKhoa.resx">
-      <DependentUpon>fQuanLyKhoa.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fHocBong.resx">
+      <DependentUpon>fHocBong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLyLop.resx">
-      <DependentUpon>fQuanLyLop.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fMonHoc.resx">
+      <DependentUpon>fMonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLyMonHoc.resx">
-      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fSinhVien.resx">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fHocPhi.resx">
+      <DependentUpon>fHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fKhoa.resx">
+      <DependentUpon>fKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLop.resx">
+      <DependentUpon>fLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThongTinChiTiet.resx">
+      <DependentUpon>fThongTinChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

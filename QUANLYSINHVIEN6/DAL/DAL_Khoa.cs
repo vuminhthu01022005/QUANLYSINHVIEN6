@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QUANLYSINHVIEN6.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QUANLYSINHVIEN6.DAL
 {
-    internal class DAL_Khoa
+    public class DAL_Khoa
     {
         private static DAL_Khoa instance;
         public static DAL_Khoa Instance
