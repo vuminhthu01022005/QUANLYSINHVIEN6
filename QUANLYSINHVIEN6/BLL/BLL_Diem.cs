@@ -10,32 +10,36 @@ namespace QUANLYSINHVIEN6.BLL
 {
     internal class BLL_Diem
     {
-        private static DAL_Diem instance;
-        public static DAL_Diem Instance
+        public class BLL_Diem
         {
-            get { if (instance == null) instance = new DAL_Diem(); return instance; }
-            private set => instance = value;
-        }
-        private DAL_Diem() { }
-        public bool Them(string MaSV, string MaMH, int PhanTramTrenLop, int PhanTramThi, float DiemLop, float DiemTB, string Loai, int NamHoc)
-        {
-            string sql = "insert into Diem(MaSV, MaMH, PhanTramTrenLop, PhanTramThi, DiemTrenLop, DiemThi, DiemTB, Loai, NamHoc) values (@MaSV , @MaMH , @PhanTramTrenLop , @PhanTramThi , @DiemTrenLop , @DiemThi , @DiemTB , @Loai , @NamHoc )";
+            private static BLL_Diem instance;
+            public static BLL_Diem Instance
+            {
+                get { if (instance == null) instance = new BLL_Diem(); return instance; }
+                private set => instance = value;
+            }
+            private BLL_Diem() { }
 
-            return KetNoi.Instance.ExcuteNonQuery(sql, new object[] { MaSV, MaMH, PhanTramTrenLop, PhanTramThi, DiemTrenLop, DiemThi, DiemTB, Loai, NamHoc });
-        }
-        public bool Sua(string MaSV, string MaMH, int PhanTramTrenLop, int PhanTramThi, float DiemLop, float DiemTB, string Loai, int NamHoc, int id)
-        {
-            string sql = "update Diem set MaSV = @MaSV , MaMH  = @MaMH , PhanTramTrenLop = @PhanTramTrenLop , PhanTramThi = @PhanTramThi , DiemTrenLop =@DiemTrenLop , DiemThi = @DiemThi , DiemTB = @DiemTB , Loai = @Loai , NamHoc = @NamHoc , where id = @id";
-            return KetNoi.Instance.ExcuteNonQuery(sql, new object[] { MaSV, MaMH, PhanTramTrenLop, PhanTramThi, DiemTrenLop, DiemThi, DiemTB, Loai, NamHoc, id });
-        }
-        public bool Xoa(int id)
-        {
-            string sql = "delete from Diem  where id = @id";
-            return KetNoi.Instance.ExcuteNonQuery(sql, new object[] { id });
-        }
-        public DataTable DanhSach()
-        {
-            return KetNoi.Instance.ExcuteNonQuery("select * from Diem");
+            public DataTable DanhSach()
+            {
+                return DAL_Diem.Instance.DanhSach();
+            }
+
+            public bool Them(string MaSV, string MaMH, int PhanTramTrenLop, int PhanTramThi, float DiemLop, float DiemTB, string Loai, int NamHoc)
+            {
+                return DAL_Diem.Instance.Them(MaSV, MaMH, PhanTramTrenLop, PhanTramThi, DiemLop, DiemTB, Loai, NamHoc);
+            }
+
+            public bool Sua(string MaSV, string MaMH, int PhanTramTrenLop, int PhanTramThi, float DiemLop, float DiemTB, string Loai, int NamHoc, int id)
+            {
+                return DAL_Diem.Instance.Sua(MaSV, MaMH, PhanTramTrenLop, PhanTramThi, DiemLop, DiemTB, Loai, NamHoc, id);
+            }
+
+            public bool Xoa(int id)
+            {
+                return DAL_Khoa.Instance.Xoa(id);
+
+            }
         }
     }
 }

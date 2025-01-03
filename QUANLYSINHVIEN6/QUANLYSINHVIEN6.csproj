@@ -53,18 +53,13 @@
     <Compile Include="BLL\BLL_Sinhvien.cs" />
     <Compile Include="BLL\BLL_TaiKhoan.cs" />
     <Compile Include="DAL\DAL_Diem.cs" />
+    <Compile Include="DAL\DAL_HocBong.cs" />
     <Compile Include="DAL\DAL_Khoa.cs" />
     <Compile Include="DAL\DAL_Lop.cs" />
     <Compile Include="DAL\DAL_MonHoc.cs" />
     <Compile Include="DAL\DAL_SinhVien.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\KetNoi.cs" />
-    <Compile Include="fDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fDangNhap.Designer.cs">
-      <DependentUpon>fDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\fDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +92,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fDangNhap.resx">
-      <DependentUpon>fDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fDiem.resx">
       <DependentUpon>fDiem.cs</DependentUpon>
     </EmbeddedResource>
