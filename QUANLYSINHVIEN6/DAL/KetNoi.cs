@@ -12,7 +12,7 @@ namespace QUANLYSINHVIEN6.DAL
     public class KetNoi
     {
         // chuỗi kết nối cơ sở dữ liệu
-        private string connectionString = "";
+        private string connectionString = "Data Source=DESKTOP-S4CDCSE\\\\XOAN;Initial Catalog=QUANLYSINHVIEN;Integrated Security=True;Encrypt=False\";
 
 
         private static KetNoi instance; // ctr + r + e
@@ -38,7 +38,7 @@ namespace QUANLYSINHVIEN6.DAL
                     int i = 0;
                     foreach (string item in listParams)
                     {
-                        if (item.Contains('@'))
+                        if (item.Contains('@Data Source=DESKTOP-S4CDCSE\\XOAN;Initial Catalog=QUANLYSINHVIEN;Integrated Security=True;Encrypt=False")
                         {
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
