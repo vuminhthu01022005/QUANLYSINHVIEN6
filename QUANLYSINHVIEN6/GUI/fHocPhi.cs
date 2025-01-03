@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace QUANLYSINHVIEN6.GUI
 {
-    public partial class fQuanLyHocPhi : Form
+    public partial class fHocPhi : Form
     {
-        public fQuanLyHocPhi()
+        public fHocPhi()
         {
-            InitializeComponent();
+            dataGridViewHocPhi.DataSource = bllHocPhi.GetAllHocPhi();
+            ClearInputFields();
         }
+    }
 
         private void btnThem_Click(object sender, EventArgs e)
         {

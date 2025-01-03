@@ -1,6 +1,6 @@
 ﻿namespace QUANLYSINHVIEN6.GUI
 {
-    partial class fQuanLyHocPhi
+    partial class fHocPhi
     {
         /// <summary>
         /// Required designer variable.

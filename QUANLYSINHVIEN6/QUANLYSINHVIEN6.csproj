@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_CoVanHocTap.cs" />
     <Compile Include="BLL\BLL_Diem.cs" />
+    <Compile Include="BLL\BLL_HocBong.cs" />
+    <Compile Include="BLL\BLL_HocPhi.cs" />
     <Compile Include="BLL\BLL_Khoa.cs" />
     <Compile Include="BLL\BLL_Lop.cs" />
     <Compile Include="BLL\BLL_MonHoc.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="DAL\DAL_CoVanHocTap.cs" />
     <Compile Include="DAL\DAL_Diem.cs" />
     <Compile Include="DAL\DAL_HocBong.cs" />
+    <Compile Include="DAL\DAL_HocPhi.cs" />
     <Compile Include="DAL\DAL_Khoa.cs" />
     <Compile Include="DAL\DAL_Lop.cs" />
     <Compile Include="DAL\DAL_MonHoc.cs" />
